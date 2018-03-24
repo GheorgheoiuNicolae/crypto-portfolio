@@ -1,0 +1,30 @@
+@import './variables.scss';
+
+h1 {
+  font-size: 28px;
+  font-weight: normal;
+  color: $TextDark;
+}
+h1.big {
+  font-size: 32px;
+  font-weight: bold;
+  color: $TextDark;
+}
+h1.page-header {
+  margin: 0;
+  color: $TextDark;
+}
+h2 {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $TextDark;
+}
+p, span {
+  font-size: 16px;
+  color: $TextDark;
+}
+
+.center {
+  text-align: center;
+}

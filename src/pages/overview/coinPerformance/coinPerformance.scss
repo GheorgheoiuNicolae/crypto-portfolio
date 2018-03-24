@@ -1,0 +1,47 @@
+@import '../../../scss/variables.scss';
+
+.coin-performance {
+  img {
+    width: 30px;
+  }
+  .list-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    border-bottom: 1px solid #eee;
+    transition: all .2s linear;
+
+    &:hover {
+      background-color: $GreenLighter;
+      border-bottom: 1px solid $GreenLight;
+    }
+
+    span.rank {
+      background: #f8f9fe;
+      width: 10px;
+      height: 10px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 5px;
+      border-radius: 100%;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    span.details {
+      font-weight: bold;
+      margin: 0 10px;
+      flex: 1;
+    }
+
+    span.percent {
+      &.green {
+        color: $Green;
+      }
+      &.red {
+        color: $Red;
+      }
+    }
+  }
+}

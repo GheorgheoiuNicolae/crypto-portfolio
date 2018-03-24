@@ -1,0 +1,13 @@
+.page-content {
+
+}
+.widget {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  transition: all .2s linear;
+  padding: 20px;
+  &:hover {
+    box-shadow: 0 5px 10px #e4e4ea;
+  }
+}

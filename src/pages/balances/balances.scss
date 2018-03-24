@@ -1,0 +1,18 @@
+.added-balances {
+  flex-direction: column;
+}
+.balance {
+  background: #fff;
+  border-radius: 10px;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+
+  img {
+    max-width: 25px;;
+  }
+  h4 {
+    margin: 0;
+    padding-left: 10px;
+  }
+}

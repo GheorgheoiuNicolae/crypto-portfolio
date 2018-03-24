@@ -1,0 +1,106 @@
+@import 'scss/imports.scss';
+@import './pages/pages.scss';
+
+.App {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sidebar */
+.App-Sidebar {
+  width: 230px;
+  height: 100%;
+  position: relative;
+  box-shadow: 5px 0px 25px #e4e4ea;
+}
+.App-Sidebar .sidebar-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+.App-Sidebar .sidebar-header {
+  background: rgba(255, 255, 255, .3);
+  margin-bottom: 40px;
+  display: flex;
+  height: 60px;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+  .logo {
+    padding: 15px 0;
+  }
+}
+.App-Sidebar .sidebar-menu {
+  display: flex;
+  flex-direction: column;
+  .menu-button {
+    /* override material for menu buttons */
+    border-radius: 0px!important;
+    color: $BlueLight!important;
+    padding: 10px!important;
+    height: auto!important;
+    position: relative;
+    width: 100%;
+    &:hover {
+      color: $accent!important;
+      .menu-icon {
+        color: $accent!important;
+      }
+      &::after {
+        //display: block;
+        opacity: 1;
+        transition: opacity .2s linear;
+      }
+    }
+
+    > div {
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+      span {
+        margin-left: 10px;
+      }
+    }
+  }
+  .menu-button::after {
+    //display: none;
+    background: #47ceab;
+    content: " ";
+    width: 4px;
+    height: 20px;
+    padding: 0px;
+    position: absolute;
+    top: 18px;
+    left: 3px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity .2s linear;
+  }
+  .menu-icon {
+    color: $BlueLight!important;
+  }
+}
+.App-Sidebar .menu-button > div {
+  /* override material text-align for buttons */
+  text-align: left;
+}
+
+/* Content - Main area */
+.App-Content {
+  flex: 1;
+  padding: 20px;
+  background: $background;
+}
+
+// wrapper for public pages: login, register, reset password
+.public-pages {
+  display: flex;
+  flex: 1;
+  background: $GreenLight;
+  justify-content: center;
+  align-items: center;
+}

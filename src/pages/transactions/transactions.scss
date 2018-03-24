@@ -1,0 +1,91 @@
+@import './addTransaction/addTransaction.scss';
+@import '../../scss/variables.scss';
+
+/* Variables
+================================== */
+$bw: 3px;  // border width
+
+
+/* Tables
+================================== */
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 3em 0;
+  padding: 0;
+}
+.table-row {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+}
+.table-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;  // Default to full width
+  padding: 0.5em 1.2em;
+  overflow: hidden; // Or flex might break
+  list-style: none;
+  border: solid $bw white;
+  background: fade(slategrey,20%);
+  > h1, > h2, > h3, > h4, > h5, > h6 { margin: 0; }
+}
+
+.transactions-list {
+  img {
+    max-width: 40px;
+  }
+}
+.transactions.table {
+  flex-direction: column;
+  img {
+    max-width: 16px;
+    margin: 0 5px;
+  }
+  .table-cell.currency-pair, .table-cell.amount {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+.transactions.table {
+  .table-row.header .table-cell {
+    padding: 5px 15px;
+    color: #afbfce;
+    background: #fff;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .table-row.header .table-cell b {
+    font-weight: normal;
+  }
+  .table-cell {
+    border: 0;
+    color: #7e849a;
+    p, span, b {
+      color: #7e849a;
+      font-size: 14px;
+    }
+  }
+  .table-row {
+    border-bottom: 1px solid #e0eef9;
+    transition: all .3s linear;
+    &.odd {
+      background: #f9fdff;
+    }
+    &.even {
+      background: #fff;
+    }
+    &:hover {
+      background: $GreenLighter;
+    }
+  }
+}
