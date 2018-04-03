@@ -47,6 +47,7 @@ export default class AddBalanceForm extends React.PureComponent<Props, OtherProp
         open={showAddBalanceModal}
         onRequestClose={() => this.closeModal('addBalance')}
         autoScrollBodyContent={true}
+        className="addBalanceModal"
         bodyStyle={{padding: '0'}}
       >
         <form onSubmit={handleSubmit(this.handleSubmit.bind(this))}>

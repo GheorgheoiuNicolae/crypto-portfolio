@@ -33,12 +33,12 @@ export default class Transactions extends React.PureComponent<Props, Own> {
     const { transactions, showModal } = this.props;
     return (
       <Flex className="Transactions" column={true}>
-        <Box>
-          <Flex>
-            <Box width={1}>
+        <Box className="page-header">
+          <Flex justify="space-between">
+            <Box>
               <h1>Transactions</h1>
             </Box>
-            <Box width={1}>
+            <Box>
               <RaisedButton
                 style={{color: '#fff'}}
                 primary={true}

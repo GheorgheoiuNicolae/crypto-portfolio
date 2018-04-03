@@ -55,6 +55,7 @@ $bw: 3px;  // border width
 }
 
 .transactions.table {
+  margin-top: 30px;
   .table-row.header .table-cell {
     padding: 5px 15px;
     color: #afbfce;
@@ -87,5 +88,12 @@ $bw: 3px;  // border width
     &:hover {
       background: $GreenLighter;
     }
+  }
+}
+
+.Transactions .page-header {
+  padding: 10px 0 20px;
+  h1 {
+    margin: 0;
   }
 }
