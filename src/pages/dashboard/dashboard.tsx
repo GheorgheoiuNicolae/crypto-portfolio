@@ -18,6 +18,7 @@ import BalanceIcon from 'material-ui/svg-icons/action/account-balance';
 import TransactionsIcon from 'material-ui/svg-icons/action/swap-horiz';
 import WatchlistIcon from 'material-ui/svg-icons/action/visibility';
 import PortfoliosIcon from 'material-ui/svg-icons/action/book';
+import StoreExchanges from 'material-ui/svg-icons/action/perm-identity';
 
 const logo = require('../../assets/logo.svg');
 
@@ -85,7 +86,9 @@ class Dashboard extends React.Component<Props, {}> {
 
       // get balances
       if(!balanceStatus.balancesLoadSuccess
-        && !balanceStatus.balancesAreLoading) {
+        && !balanceStatus.balancesAreLoading
+        && transactionsStatus.transactionsLoadSuccess
+        && !transactionsStatus.transactionsAreLoading) {
           getBalances(auth.user.uid, defaultPortfolio.id);
       }
 
@@ -140,15 +143,16 @@ class Dashboard extends React.Component<Props, {}> {
               <Link to="/portfolios" >
                 <FlatButton className="menu-button">
                   <PortfoliosIcon className="menu-icon" />
-                    <span>Portfolios</span>
+                  <span>Portfolios</span>
                 </FlatButton>
               </Link>
+              {auth.user.email === 'accounts@gheorgheoiu.com' && (
+                <FlatButton className="menu-button" onClick={() => this.storeExchanges()}>
+                  <StoreExchanges className="menu-icon" />
+                  <span>Store exchanges</span>
+                </FlatButton>
+              )}
             </div>
-            {auth.user.email === 'accounts@gheorgheoiu.com' && (
-              <div className="admin-tools" >
-                <h3 onClick={() => this.storeExchanges()}>Store exchanges</h3>
-              </div>
-            )}
           </div>
         </section>
         <section className="App-Content">

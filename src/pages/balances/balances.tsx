@@ -18,7 +18,6 @@ export default class Balances extends React.PureComponent<Props, {balances: any[
   }
 
   componentWillReceiveProps(next: any) {
-    console.log('componentWillReceiveProps');
     if( 
       next.balancesLoaded && next.transactionsLoaded) {
       // console.log('next: ', next);
@@ -55,7 +54,6 @@ export default class Balances extends React.PureComponent<Props, {balances: any[
     });
 
     transactions.forEach((t: any, i) => {
-      console.log('transactions: ', transactions.length, i, transactions);
       // if the currencyBought is not already in userHoldings
       if(!userHoldings[t.currencyBought]) {
         userHoldings[t.currencyBought] = {
@@ -88,9 +86,6 @@ export default class Balances extends React.PureComponent<Props, {balances: any[
     });
 
     this.setState({ balances: userHoldings });
-
-    console.log('userHoldings: ', userHoldings);
-
   }
 
   render() {
@@ -117,7 +112,6 @@ export default class Balances extends React.PureComponent<Props, {balances: any[
         </Box>
 
         {Object.keys(balances).map((key: any) => {
-          console.log('key: ', key, balances[key]);
             return (
               <Box className="balance" key={key}>
                 {/* <img src={`https://chasing-coins.com/api/v1/std/logo/${balance.currency}`} alt=""/> */}
