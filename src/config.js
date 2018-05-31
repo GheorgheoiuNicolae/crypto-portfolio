@@ -7,6 +7,5 @@ module.exports = {
       projectId: 'cryptal-8bcca',
       storageBucket: 'cryptal-8bcca.appspot.com',
       messagingSenderId: '609126296259'
-
     },
 };

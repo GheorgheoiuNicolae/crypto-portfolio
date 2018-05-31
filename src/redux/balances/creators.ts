@@ -11,7 +11,7 @@ export const getBalances = (uid: string, portfolioId: string) => {
       let balancesArr: any = [];
       for (var key in balances) {
         if (balances.hasOwnProperty(key)) {
-            balancesArr.push(balances[key]);
+          balancesArr.push(balances[key]);
         }
       }
       dispatch(actions.loadBalancesSuccess(balancesArr));
